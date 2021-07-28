@@ -1,0 +1,44 @@
+@mixin flex-end {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin button {
+	border: 0;
+	padding: 8px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+@mixin input-text {
+	padding: 13px 15px;
+	border-radius: 5px;
+	background-color: transparent;
+	border: 1px solid rgb(192, 192, 192);
+	width: 100%;
+}
+
+@mixin container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+//media query mixin
+@mixin smallerThan($pixels) {
+	@media (max-width: $pixels) {
+		@content;
+	}
+}

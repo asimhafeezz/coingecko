@@ -1,0 +1,118 @@
+.navbar {
+	@include container;
+	.top-level {
+		@include flex-end;
+		padding: 15px 80px;
+		border-bottom: 1px solid rgb(190, 190, 190);
+		section {
+			@include flex-center;
+			p {
+				margin: 0 13px;
+				font-size: 13.5px;
+			}
+			button {
+				@include button;
+				margin: 0 10px;
+				border: 1px solid rgb(0, 206, 0);
+				background-color: transparent;
+				font-size: 13.5px;
+				color: rgb(0, 206, 0);
+				&:hover {
+					background-color: rgba(0, 206, 0, 0.03);
+				}
+			}
+		}
+
+		//media query
+		@include smallerThan(700px) {
+			display: none;
+		}
+	}
+
+	//mid level
+	.mid-level {
+		@include flex-between;
+		justify-content: space-around;
+		padding: 20px;
+		border-bottom: 1px solid rgb(190, 190, 190);
+		section:nth-child(1) {
+			@include flex-center;
+			width: 100%;
+			justify-content: flex-start;
+			.menu-icon,
+			.profile-icon {
+				display: none;
+			}
+			img {
+				height: 40px;
+			}
+			ul {
+				@include flex-center;
+				justify-content: flex-start;
+				li:nth-child(1) {
+					margin-left: 20px;
+				}
+				li {
+					margin: 0 10px;
+					font-size: 14px;
+					cursor: pointer;
+				}
+
+				//media query
+				@include smallerThan(1100px) {
+					display: none;
+				}
+			}
+			//media query
+			@include smallerThan(1100px) {
+				justify-content: space-around;
+				.menu-icon,
+				.profile-icon {
+					display: block;
+				}
+				.menu-icon {
+					justify-self: flex-start;
+				}
+				.profile-icon {
+					justify-self: flex-end;
+				}
+			}
+		}
+		input[type="text"] {
+			@include input-text;
+			// margin-left: 30px;
+		}
+
+		//media query
+		@include smallerThan(1100px) {
+			flex-direction: column;
+			section {
+				margin: 5px 0;
+			}
+		}
+	}
+
+	//end level
+	.end-level {
+		ul {
+			@include flex-end;
+			justify-content: space-around;
+			max-width: 60%;
+			padding: 10px 10px;
+			li {
+				white-space: nowrap;
+				font-size: 14px;
+				margin: 0 3px;
+				.value {
+					color: rgb(151, 151, 151);
+				}
+			}
+
+			//media query
+			@include smallerThan(1100px) {
+				max-width: 100%;
+				overflow-x: auto;
+			}
+		}
+	}
+}

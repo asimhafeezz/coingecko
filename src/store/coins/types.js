@@ -1,0 +1,2 @@
+export const FETCH_ALL_COINS = "FETCH_ALL_COINS"
+export const FETCH_COIN_DETAIL = "FETCH_COIN_DETAIL"

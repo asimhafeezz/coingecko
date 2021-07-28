@@ -1,11 +1,11 @@
-import { NavbarFooter, NavbarTop } from "../components"
+import { Footer, Navbar } from "../components"
 
 export const Layout = ({ children }) => {
 	return (
 		<>
-			<NavbarTop />
+			<Navbar />
 			<main>{children}</main>
-			<NavbarFooter />
+			<Footer />
 		</>
 	)
 }
