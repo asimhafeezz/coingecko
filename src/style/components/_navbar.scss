@@ -45,6 +45,7 @@
 			}
 			img {
 				height: 40px;
+				cursor: pointer;
 			}
 			ul {
 				@include flex-center;
@@ -81,6 +82,7 @@
 		input[type="text"] {
 			@include input-text;
 			// margin-left: 30px;
+			width: 80%;
 		}
 
 		//media query

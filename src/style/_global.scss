@@ -12,4 +12,15 @@ body {
 	ul {
 		list-style-type: none;
 	}
+
+	//global spinner
+	.gif-loader {
+		height: 18px;
+	}
+
+	//global spinner section
+	.spinner-section {
+		@include flex-center;
+		height: 40vh;
+	}
 }

@@ -1,0 +1,144 @@
+.coin-detail {
+	@include container;
+	.header {
+		@include flex-center;
+		justify-content: flex-start;
+		padding: 10px 20px;
+		img {
+			width: 25px;
+			margin-right: 10px;
+		}
+		h1 {
+			font-size: 23px;
+		}
+	}
+	.big-price {
+		padding: 0px 20px;
+		font-size: 40px;
+		letter-spacing: 1px;
+	}
+
+	.buttons {
+		overflow-x: auto;
+		white-space: nowrap;
+		padding: 10px 20px;
+		button:nth-child(1) {
+			background-color: #5cb612;
+		}
+		button {
+			@include button;
+			margin-right: 15px;
+			border-radius: 20px;
+			padding: 10px 15px;
+			background-color: #dfdfdf;
+		}
+	}
+	.content {
+		padding: 20px;
+		//main content
+		.main-content {
+			@include grid;
+			grid-template-columns: 1fr 0.4fr;
+			//left side content
+			.left-grid-content {
+				.filteration {
+					margin-top: 15px;
+					@include flex-between;
+					.left-side {
+						.tabs {
+							border: 1px solid gray;
+							border-radius: 5px;
+							button {
+								@include button;
+								&:hover {
+									background-color: #dfdfdf;
+								}
+							}
+							button:nth-child(1) {
+								background-color: rgb(194, 194, 194);
+								border-radius: 5px 0 0 5px;
+								border-right: 1px solid gray;
+							}
+							button:nth-child(2) {
+								border-radius: 0px 0 0 0px;
+								border-right: 1px solid gray;
+							}
+							button:nth-child(3) {
+								border-radius: 0px 5px 5px 0px;
+							}
+						}
+					}
+					.right-side {
+						.tabs {
+							border: 1px solid gray;
+							border-radius: 5px;
+							button {
+								@include button;
+								border-radius: 0;
+								border-right: 1px solid gray;
+								&:hover {
+									background-color: #dfdfdf;
+								}
+							}
+							button:nth-child(1) {
+								background-color: rgb(194, 194, 194);
+								border-radius: 5px 0 0 5px;
+								border-right: 1px solid gray;
+							}
+							button:nth-child(8) {
+								border-radius: 0px 5px 5px 0px;
+							}
+						}
+					}
+				}
+				.right-side-filter {
+					@include flex-end;
+					.tabs {
+						border: 1px solid gray;
+						border-radius: 5px;
+						button {
+							@include button;
+							&:hover {
+								background-color: #dfdfdf;
+							}
+						}
+						button:nth-child(1) {
+							background-color: rgb(194, 194, 194);
+							border-radius: 5px 0 0 5px;
+							border-right: 1px solid gray;
+						}
+						button:nth-child(2) {
+							border-radius: 0px 0 0 0px;
+							border-right: 1px solid gray;
+						}
+						button:nth-child(3) {
+							border-radius: 0px 5px 5px 0px;
+						}
+					}
+				}
+				.graph-container {
+					margin-top: 100px;
+				}
+			}
+
+			//right grid content
+			.right-grid-content {
+				.detail-table {
+					background-color: #dfdfdf;
+					padding: 20px;
+					border-radius: 15px;
+					.row {
+						@include flex-between;
+						border-bottom: 1px solid gray;
+						padding: 20px 5px;
+					}
+				}
+			}
+
+			//media query
+			@include smallerThan(1000px) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+}

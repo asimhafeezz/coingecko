@@ -1,15 +1,16 @@
+import { useHistory } from "react-router-dom"
 import { MenuIcon, ProfileIcon } from "../icons"
 
 export const Navbar = () => {
+	//use History
+	const { push } = useHistory()
 	return (
 		<nav className='navbar'>
 			<section className='top-level'>
 				<section>
-					<p>EN</p>
-					<p>USD</p>
-					<p>Help</p>
-					<p>Login</p>
-					<p>Sign Up</p>
+					{topNavOptions?.map((item, itemIdx) => (
+						<p key={itemIdx}>{item}</p>
+					))}
 					<button>Subscribe</button>
 				</section>
 				<hr />
@@ -17,7 +18,7 @@ export const Navbar = () => {
 			<section className='mid-level'>
 				<section>
 					<MenuIcon className='menu-icon' />
-					<img src='/logo.webp' alt='logo' />
+					<img src='/logo.webp' alt='logo' onClick={() => push("/")} />
 					<ul>
 						{midLevelData?.map((item, itemIdx) => (
 							<li key={itemIdx}>{item}</li>
@@ -84,3 +85,5 @@ const endLevelData = [
 		value: "33 gwei",
 	},
 ]
+
+const topNavOptions = ["EN", "USD", "Help", "Login", "Sign Up"]
