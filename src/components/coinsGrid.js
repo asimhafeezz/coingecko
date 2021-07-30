@@ -18,7 +18,9 @@ export const CoinsGrid = React.memo(() => {
 	const goToCoinDetail = id => push(`/coins/${id}`)
 
 	const minimizeValue = value => {
-		return value.toString().length >= 10 ? value.toString().slice(0, 10) : value
+		return value?.toString()?.length >= 10
+			? value?.toString()?.slice(0, 10)
+			: value
 	}
 
 	return (
