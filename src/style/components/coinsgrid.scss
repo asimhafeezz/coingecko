@@ -2,6 +2,7 @@
 	@include container;
 
 	margin-bottom: 50px;
+	margin-top: 50px;
 
 	//header
 	.header {
@@ -51,9 +52,7 @@
 	.coins-grid-section {
 		overflow-x: auto;
 		max-width: 1400px;
-		hr {
-			background: red;
-		}
+
 		.headers {
 			white-space: nowrap;
 			// border-top: 1px solid rgb(190, 190, 190);
@@ -66,6 +65,9 @@
 
 			h4 {
 				min-width: 100px;
+			}
+			h4:nth-child(2) {
+				min-width: 250px;
 			}
 		}
 

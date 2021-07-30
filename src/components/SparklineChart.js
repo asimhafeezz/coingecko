@@ -1,8 +1,11 @@
 import { Sparklines, SparklinesLine, SparklinesSpots } from "react-sparklines"
 import PropTypes from "prop-types"
 
-export const SparklineChart = ({ arr }) => (
-	<Sparklines data={arr} style={{ width: "auto", height: "auto" }} limit={20}>
+export const SparklineChart = ({ arr, fixed = false }) => (
+	<Sparklines
+		data={arr}
+		style={{ width: fixed ? "100px" : "auto", height: "auto" }}
+		limit={20}>
 		<SparklinesLine
 			style={{
 				strokeWidth: 1,
@@ -16,4 +19,5 @@ export const SparklineChart = ({ arr }) => (
 
 SparklineChart.prototype = {
 	arr: PropTypes.array.isRequired,
+	fixed: PropTypes.bool,
 }

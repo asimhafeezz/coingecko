@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { useSelector } from "react-redux"
 import { useHistory } from "react-router-dom"
 import { Spinner } from "../common/spinner"
 import { LeftArrowIcon, RightArrowIcon } from "../icons"
 import { CoinRow } from "./coinRow"
 import { Tabs } from "./tabs"
+import { TrendingCoins } from "./trendingCoins"
 
 export const CoinsGrid = React.memo(() => {
 	//srore
@@ -56,7 +57,9 @@ export const CoinsGrid = React.memo(() => {
 					))}
 				</section>
 				<hr />
-				{loadingAllCoins && (
+
+				{/* loading spinner */}
+				{loadingAllCoins && coins.length === 0 && (
 					<div className='spinner-section'>
 						<Spinner />
 					</div>
@@ -84,6 +87,8 @@ export const CoinsGrid = React.memo(() => {
 						))}
 				</section>
 			</section>
+			{/* trending coins */}
+			<TrendingCoins />
 		</section>
 	)
 })

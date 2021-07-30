@@ -1,6 +1,7 @@
 .coin-detail {
 	@include container;
 	margin-bottom: 50px;
+	margin-top: 50px;
 	.header {
 		@include flex-center;
 		justify-content: flex-start;
@@ -10,7 +11,10 @@
 			margin-right: 10px;
 		}
 		h1 {
-			font-size: 23px;
+			font-size: 25px;
+			span {
+				text-transform: uppercase;
+			}
 		}
 	}
 	.big-price {
@@ -36,6 +40,11 @@
 	}
 	.content {
 		padding: 20px;
+		h2 {
+			span {
+				text-transform: uppercase;
+			}
+		}
 		//main content
 		.main-content {
 			@include grid;
@@ -133,6 +142,11 @@
 					background-color: #dfdfdf;
 					padding: 20px;
 					border-radius: 15px;
+					h2 {
+						span {
+							text-transform: uppercase;
+						}
+					}
 					.row {
 						@include flex-between;
 						border-bottom: 1px solid gray;

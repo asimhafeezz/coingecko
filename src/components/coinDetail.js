@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import { Spinner } from "../common/spinner"
 import { SparklineChart } from "./SparklineChart"
 import { Tabs } from "./tabs"
+import { TrendingCoins } from "./trendingCoins"
 
 export const CoinDetail = React.memo(() => {
 	//store
@@ -71,9 +72,13 @@ export const CoinDetail = React.memo(() => {
 					</section>
 					<section className='right-grid-content'>
 						<section className='detail-table'>
-							<h2>BTC Price and Market Stats</h2>
+							<h2>
+								<span>{coin?.name}</span> Price and Market Stats
+							</h2>
 							<section className='row'>
-								<p>BTC Price</p>
+								<p>
+									<span>{coin?.name}</span> Price
+								</p>
 								<p>${coin?.market_data?.current_price?.usd}</p>
 							</section>
 							<section className='row'>
@@ -120,6 +125,8 @@ export const CoinDetail = React.memo(() => {
 					</section>
 				</section>
 			</section>
+
+			<TrendingCoins />
 		</div>
 	)
 })

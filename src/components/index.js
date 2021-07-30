@@ -1,4 +1,6 @@
 import { Navbar } from "./navbar"
 import { Footer } from "./footer"
 import { CoinsGrid } from "./coinsGrid"
-export { Navbar, Footer, CoinsGrid }
+import { TrendingCoins } from "./trendingCoins"
+
+export { Navbar, Footer, CoinsGrid, TrendingCoins }
