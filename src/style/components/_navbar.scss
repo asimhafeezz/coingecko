@@ -98,13 +98,13 @@
 	.end-level {
 		ul {
 			@include flex-end;
-			justify-content: space-around;
-			max-width: 60%;
-			padding: 10px 10px;
+			justify-content: flex-start;
+			// max-width: 100%;
+			padding: 10px 20px;
 			li {
 				white-space: nowrap;
 				font-size: 14px;
-				margin: 0 3px;
+				margin: 0 4px;
 				.value {
 					color: rgb(151, 151, 151);
 				}

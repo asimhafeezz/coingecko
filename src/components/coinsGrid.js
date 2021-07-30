@@ -16,6 +16,10 @@ export const CoinsGrid = React.memo(() => {
 
 	const goToCoinDetail = id => push(`/coins/${id}`)
 
+	const minimizeValue = value => {
+		return value.toString().length >= 10 ? value.toString().slice(0, 10) : value
+	}
+
 	return (
 		<section className='coins-grid'>
 			<Tabs tabs={tabs} firstActiveTab={"Coins"} />
@@ -67,12 +71,14 @@ export const CoinsGrid = React.memo(() => {
 								coinName={coin?.name}
 								symbol={coin?.symbol}
 								price={coin?.current_price}
-								hr1={coin?.price_change_percentage_1h_in_currency}
+								hr1={minimizeValue(
+									coin?.price_change_percentage_1h_in_currency
+								)}
 								img={coin?.image}
-								h24={coin?.price_change_percentage_24h}
-								d7={coin?.price_change_percentage_7d_in_currency}
-								h24Volume={coin?.total_volume}
-								mktCap={coin?.market_cap}
+								h24={minimizeValue(coin?.price_change_percentage_24h)}
+								d7={minimizeValue(coin?.price_change_percentage_7d_in_currency)}
+								h24Volume={minimizeValue(coin?.total_volume)}
+								mktCap={minimizeValue(coin?.market_cap)}
 								last7Days={coin?.sparkline_in_7d?.price}
 							/>
 						))}

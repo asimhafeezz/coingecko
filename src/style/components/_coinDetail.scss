@@ -1,5 +1,6 @@
 .coin-detail {
 	@include container;
+	margin-bottom: 50px;
 	.header {
 		@include flex-center;
 		justify-content: flex-start;
@@ -42,9 +43,10 @@
 			//left side content
 			.left-grid-content {
 				.filteration {
-					margin-top: 15px;
+					margin-top: 8px;
 					@include flex-between;
 					.left-side {
+						overflow-x: auto;
 						.tabs {
 							border: 1px solid gray;
 							border-radius: 5px;
@@ -89,6 +91,10 @@
 								border-radius: 0px 5px 5px 0px;
 							}
 						}
+					}
+
+					@include smallerThan(1000) {
+						flex-direction: column;
 					}
 				}
 				.right-side-filter {
