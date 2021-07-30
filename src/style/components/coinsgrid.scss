@@ -79,6 +79,7 @@
 				grid-template-columns: 0.4fr 1fr repeat(7, 0.4fr);
 				padding: 20px;
 				// place-items: start;
+				align-items: center;
 
 				.badge-value {
 					@include flex-between;
