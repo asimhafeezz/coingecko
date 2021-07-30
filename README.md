@@ -1,10 +1,9 @@
 # Coin Gecko
 A simple clone of coingecko web Application.
 
-## Available Scripts
+## Available Scripts to start cloned project.
 
-In the project directory, you can run:
-
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.\
